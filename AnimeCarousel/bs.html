@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Carousel</title>
+    <link rel="icon" href="./assets/Anime Carousel .png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #3b3b58;
+        color: #fff;
+        font-family: Arial, sans-serif;
+      }
+      .hero {
+        background-color: #1f1f38;
+        padding: 50px 0;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+      .hero p {
+        font-size: 1.2rem;
+      }
+      .work-experience {
+        background-color: #141432;
+        padding: 50px 0;
+      }
+      .work-experience h2 {
+        margin-bottom: 40px;
+      }
+      .work-experience .company {
+        margin-bottom: 30px;
+      }
+      .col-md-6 img {
+        width: 500px;
+        height: 500px;
+      }
+      .col-md-4 img {
+        width: 300px;
+        height: 400px;
+      }
+      .philosophy-values {
+        background-color: #fcf4d9;
+        color: #000;
+        padding: 50px 0;
+      }
+      .philosophy-values h2 {
+        margin-bottom: 40px;
+      }
+      .modal-dialog {
+        max-width: 800px;
+        max-height: 600px;
+      }
+      .modal-body iframe {
+        width: 100%;
+        height: 450px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Anime Carousel</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Anime List</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Characters</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Carousel Hero Section -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container-fluid hero text-center">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <h1>Luffy</h1>
+                  <p>
+                    Monkey D. Luffy, a boy whose body gained the properties of
+                    rubber after unintentionally eating a Devil Fruit.
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <img
+                    src="./assets/luffy.jpg"
+                    class="img-fluid"
+                    alt="Monkey D. Luffy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container-fluid hero text-center">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <h1>Ichigo Kurosaki</h1>
+                  <p>
+                    Ichigo Kurosaki is a high school student who becomes a Soul
+                    Reaper, tasked with protecting humans from evil spirits.
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <img
+                    src="./assets/Ichigo Kurosaki.jpg"
+                    class="img-fluid"
+                    alt="Ichigo Kurosaki"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container-fluid hero text-center">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <h1>Naruto Uzumaki</h1>
+                  <p>
+                    Naruto Uzumaki is a young ninja with a great dream - to
+                    become the Hokage, the strongest ninja in his village.
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <img
+                    src="./assets/Naruto Uzumaki.jpg"
+                    class="img-fluid"
+                    alt="Naruto Uzumaki"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Work Experience Section -->
+    <div class="container-fluid work-experience text-center">
+      <div class="container">
+        <h2>Popular Anime Series</h2>
+        <div class="row">
+          <div class="col-md-4 company">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#attackOnTitan">
+              <img
+                src="./assets/Attack_on_Titan.jpg"
+                class="img-fluid img-thumbnail"
+                alt="Attack on Titan"
+              />
+            </a>
+            <h4 class="pt-4">Attack on Titan</h4>
+            <p class="py-2">
+              Humanity's last hope lies within the Walls as they fight against
+              the fearsome Titans.
+            </p>
+          </div>
+          <div class="col-md-4 company">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#myHeroAcademia">
+              <img
+                src="./assets/my_hero_academia.jpg"
+                class="img-fluid img-thumbnail"
+                alt="My Hero Academia"
+              />
+            </a>
+            <h4 class="pt-4">My Hero Academia</h4>
+            <p class="py-2">
+              In a world where nearly everyone has superpowers, Izuku Midoriya
+              is determined to become a hero.
+            </p>
+          </div>
+          <div class="col-md-4 company">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#onePunchMan">
+              <img
+                src="./assets/one_punch_man.jpg"
+                class="img-fluid img-thumbnail"
+                alt="One Punch Man"
+              />
+            </a>
+            <h4 class="pt-4">One Punch Man</h4>
+            <p class="py-2">
+              Saitama, a hero who can defeat any opponent with a single punch,
+              seeks a worthy adversary.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Modals -->
+    <div
+      class="modal fade"
+      tabindex="-1"
+      id="attackOnTitan"
+      aria-labelledby="attackOnTitan"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title text-dark">Attack on Titan Trailer</h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <iframe
+              src="https://www.youtube.com/embed/sBLsE-NKEoI?si=KacJgZo4-FNi9ojG"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      tabindex="-1"
+      id="myHeroAcademia"
+      aria-labelledby="myHeroAcademia"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title text-dark">My Hero Academia Trailer</h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/X_r-M3coFe4?si=2oGdWVneV41B55vX"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      tabindex="-1"
+      id="onePunchMan"
+      aria-labelledby="onePunchMan"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title text-dark">One Punch Man Trailer</h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <iframe
+              src="https://www.youtube.com/embed/atxYe-nOa9w"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Philosophy & Values Section -->
+    <div class="container-fluid philosophy-values text-center">
+      <div class="container">
+        <h2>Philosophy & Values</h2>
+        <p>
+          Anime teaches us about perseverance, friendship, and the importance of
+          chasing our dreams.
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
